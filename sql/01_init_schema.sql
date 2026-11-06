@@ -1,6 +1,6 @@
 -- ============================================================================
 -- BGM213 Veritabanı ve Yönetimi - Proje
--- Öğrenci: Semih Aydın (252302003) | Trabzon Üniversitesi Bilgisayar Mühendisliği
+-- Semih Aydın (252302003) | Trabzon Üniversitesi Bilgisayar Mühendisliği
 -- ============================================================================
 
 DROP TABLE IF EXISTS audit_logs CASCADE;
