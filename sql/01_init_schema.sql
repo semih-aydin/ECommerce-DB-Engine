@@ -57,6 +57,7 @@ CREATE TABLE products (
     product_code VARCHAR(60) NOT NULL UNIQUE,
     name VARCHAR(200) NOT NULL,
     description TEXT,
+    image_url TEXT,
     base_price NUMERIC(12, 2) NOT NULL 
         CHECK (base_price > 0), 
     tax_rate NUMERIC(5, 2) NOT NULL DEFAULT 20.00 

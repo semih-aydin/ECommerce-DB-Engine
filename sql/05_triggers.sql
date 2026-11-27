@@ -11,30 +11,23 @@ DROP FUNCTION IF EXISTS fn_trg_check_and_reduce_stock();
 DROP FUNCTION IF EXISTS fn_trg_audit_product_price_change();
 DROP FUNCTION IF EXISTS fn_trg_update_order_status_on_payment();
 
--- ----------------------------------------------------------------------------
--- 1. STOK DÜŞME VE DENETLEME TETİKLEYİCİSİ
--- Sipariş kalemi eklendiğinde depodaki stoğu düşer, yetersizse hata fırlatır
-
+-- 1. Sipariş kalemi eklenince stoğu kontrol et ve düş
 CREATE OR REPLACE FUNCTION fn_trg_check_and_reduce_stock()
 RETURNS TRIGGER AS $$
 DECLARE
     v_stock INT;
     v_prod_name VARCHAR(200);
 BEGIN
-    -- Ürünün güncel stok miktarını al
-    SELECT stock_quantity, name 
+    SELECT i.stock_quantity, p.name
     INTO v_stock, v_prod_name
     FROM inventory i
     JOIN products p ON i.product_id = p.id
     WHERE i.product_id = NEW.product_id;
 
-    -- Stok yeterliliğini denetle
     IF v_stock < NEW.quantity THEN
-        RAISE EXCEPTION 'Yetersiz stok! Ürün: % (Mevcut: %, Talep: %)', 
-            v_prod_name, v_stock, NEW.quantity;
+        RAISE EXCEPTION 'Yetersiz stok! Ürün: % (Mevcut: %, İstenen: %)', v_prod_name, v_stock, NEW.quantity;
     END IF;
 
-    -- Stoğu otomatik azalt
     UPDATE inventory
     SET stock_quantity = stock_quantity - NEW.quantity,
         updated_at = CURRENT_TIMESTAMP
@@ -49,39 +42,19 @@ AFTER INSERT ON order_items
 FOR EACH ROW
 EXECUTE FUNCTION fn_trg_check_and_reduce_stock();
 
--- ----------------------------------------------------------------------------
--- 2. FİYAT DEĞİŞİMİ DENETİM (AUDIT) TETİKLEYİCİSİ
--- Ürün baz fiyatı güncellendiğinde eski ve yeni fiyatı audit_logs'a yazar
-
+-- 2. Ürün fiyatı değişince eski ve yeni fiyatı audit_logs'a yaz
 CREATE OR REPLACE FUNCTION fn_trg_audit_product_price_change()
 RETURNS TRIGGER AS $$
 BEGIN
-    -- Fiyat gerçekten değiştiyse denetim tablosuna log at
     IF OLD.base_price <> NEW.base_price THEN
-        INSERT INTO audit_logs (
-            entity_name,
-            entity_id,
-            action,
-            old_value,
-            new_value,
-            changed_by,
-            changed_at
-        ) VALUES (
+        INSERT INTO audit_logs (entity_name, entity_id, action, old_value, new_value, changed_by)
+        VALUES (
             'products',
             NEW.id,
             'PRICE_UPDATE',
-            jsonb_build_object(
-                'product_code', OLD.product_code, 
-                'name', OLD.name, 
-                'base_price', OLD.base_price
-            ),
-            jsonb_build_object(
-                'product_code', NEW.product_code, 
-                'name', NEW.name, 
-                'base_price', NEW.base_price
-            ),
-            'PriceTrigger',
-            CURRENT_TIMESTAMP
+            jsonb_build_object('name', OLD.name, 'base_price', OLD.base_price),
+            jsonb_build_object('name', NEW.name, 'base_price', NEW.base_price),
+            'PriceTrigger'
         );
     END IF;
 
@@ -94,10 +67,7 @@ AFTER UPDATE OF base_price ON products
 FOR EACH ROW
 EXECUTE FUNCTION fn_trg_audit_product_price_change();
 
--- ----------------------------------------------------------------------------
--- 3. ÖDEME ONAY TETİKLEYİCİSİ
--- Ödeme durumu SUCCESS olduğunda sipariş durumunu otomatik PROCESSING yapar
-
+-- 3. Ödeme başarılı olunca sipariş durumunu PROCESSING yap
 CREATE OR REPLACE FUNCTION fn_trg_update_order_status_on_payment()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -105,8 +75,7 @@ BEGIN
         UPDATE orders
         SET status = 'PROCESSING',
             updated_at = CURRENT_TIMESTAMP
-        WHERE id = NEW.order_id 
-          AND status = 'PENDING';
+        WHERE id = NEW.order_id AND status = 'PENDING';
     END IF;
 
     RETURN NEW;

@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: oklch(0.135 0.006 250);
+  --bg-surface: oklch(0.17 0.007 250);
+  --bg-elevated: oklch(0.205 0.008 250);
+  --border-subtle: oklch(0.26 0.01 250);
+  --border-strong: oklch(0.34 0.012 250);
+
+  --ink-primary: oklch(0.95 0.005 85);
+  --ink-secondary: oklch(0.72 0.008 250);
+  --ink-muted: oklch(0.55 0.008 250);
+
+  --accent-signal: oklch(0.71 0.175 45);
+  --accent-signal-dim: oklch(0.71 0.175 45 / 0.14);
+
+  --status-ok: oklch(0.68 0.155 155);
+  --status-ok-dim: oklch(0.68 0.155 155 / 0.14);
+  --status-warn: oklch(0.76 0.165 80);
+  --status-warn-dim: oklch(0.76 0.165 80 / 0.14);
+  --status-err: oklch(0.63 0.20 25);
+  --status-err-dim: oklch(0.63 0.20 25 / 0.14);
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ince scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}

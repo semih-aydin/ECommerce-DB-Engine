@@ -54,58 +54,110 @@ ADDRESSES = [
     ("Eskişehir", "Tepebaşı", "Yenibağlar Mah. Üniversite Cad. No:")
 ]
 
-TECH_PRODUCTS = [
-    ("PRD-APL-MBP14", "Apple MacBook Pro 14 inç M3 Pro 18GB 512GB", "Liquid Retina XDR ekran, Space Black", 79999.00, 20.00, "dizustu-bilgisayarlar"),
-    ("PRD-APL-MBP16", "Apple MacBook Pro 16 inç M3 Max 36GB 1TB", "Profesyonel Apple dizüstü", 129999.00, 20.00, "dizustu-bilgisayarlar"),
-    ("PRD-ASU-ROG16", "Asus ROG Strix SCAR 16 RTX 4080", "Intel i9 14900HX, 32GB DDR5, 1TB NVMe", 89999.00, 20.00, "dizustu-bilgisayarlar"),
-    ("PRD-DEL-XPS13", "Dell XPS 13 Plus Intel Core Ultra 7", "OLED ekran, 16GB RAM, 1TB SSD", 59999.00, 20.00, "dizustu-bilgisayarlar"),
-    ("PRD-LNV-LEG07", "Lenovo Legion Pro 7 RTX 4090", "Ryzen 9 7945HX, 32GB RAM, 2TB SSD", 112000.00, 20.00, "dizustu-bilgisayarlar"),
-    ("PRD-MSI-STH14", "MSI Stealth 14 Studio RTX 4060", "İnce magnezyum kasa, 16GB RAM", 52999.00, 20.00, "dizustu-bilgisayarlar"),
-    ("PRD-ACR-NIT05", "Acer Nitro 5 i5 RTX 4050 Oyuncu Laptop", "Oyuncu dizüstü bilgisayarı", 29999.00, 20.00, "dizustu-bilgisayarlar"),
-    ("PRD-APL-IP15B", "Apple iPhone 15 128GB Mavi", "A16 Bionic çip, 48MP kamera", 53999.00, 20.00, "akilli-telefonlar"),
-    ("PRD-APL-IP15M", "Apple iPhone 15 Pro Max 256GB Naturel Titanyum", "5x Telefoto lens, Titanyum kasa", 79999.00, 20.00, "akilli-telefonlar"),
-    ("PRD-SMS-S24PL", "Samsung Galaxy S24 Plus 256GB Gri", "Galaxy AI, QHD+ AMOLED ekran", 46999.00, 20.00, "akilli-telefonlar"),
-    ("PRD-SMS-S24UT", "Samsung Galaxy S24 Ultra 512GB Titanyum Siyah", "Dahili S-Pen, 200MP kamera", 73999.00, 20.00, "akilli-telefonlar"),
-    ("PRD-XIA-14PR", "Xiaomi 14 Pro 512GB Siyah", "Leica lens, Snapdragon 8 Gen 3", 49999.00, 20.00, "akilli-telefonlar"),
-    ("PRD-XIA-RED13", "Xiaomi Redmi Note 13 Pro 256GB", "200MP kamera, 67W hızlı şarj", 15999.00, 20.00, "akilli-telefonlar"),
-    ("PRD-GOO-PXL8P", "Google Pixel 8 Pro 128GB Obsidyen", "Tensor G3 çip", 41500.00, 20.00, "akilli-telefonlar"),
-    ("PRD-APL-APP02", "Apple AirPods Pro (2. Nesil) USB-C", "Aktif gürültü engelleme", 8999.00, 20.00, "kulakliklar"),
-    ("PRD-APL-APMAX", "Apple AirPods Max Gök Mavisi", "Yüksek kaliteli kulak üstü ses", 26999.00, 20.00, "kulakliklar"),
-    ("PRD-SNY-WF5BK", "Sony WF-1000XM5 TWS Kulak İçi Kulaklık", "Entegre V2 işlemci", 9499.00, 20.00, "kulakliklar"),
-    ("PRD-BSE-QC45B", "Bose QuietComfort 45 Kablosuz Kulaklık", "Kablosuz ANC kulaklık", 11999.00, 20.00, "kulakliklar"),
-    ("PRD-SEN-HD660", "Sennheiser HD 660S2 Stüdyo Kulaklık", "Odyofil düzeyinde stüdyo sesi", 18500.00, 20.00, "kulakliklar"),
-    ("PRD-JBL-FLIP6", "JBL Flip 6 Bluetooth Hoparlör", "Su geçirmez taşınabilir hoparlör", 4199.00, 20.00, "kulakliklar"),
-    ("PRD-LOG-MXKEY", "Logitech MX Keys S Aydınlatmalı Klavye", "Sessiz ve akıllı aydınlatmalı klavye", 4399.00, 20.00, "cevre-birimleri"),
-    ("PRD-LOG-GPRX2", "Logitech G Pro X Superlight 2 Beyaz", "60g ultra hafif oyuncu faresi", 5699.00, 20.00, "cevre-birimleri"),
-    ("PRD-RAZ-BLAKV", "Razer BlackWidow V4 Pro Mekanik Klavye", "Green Switch, RGB mekanik klavye", 7999.00, 20.00, "cevre-birimleri"),
-    ("PRD-STL-ARCT9", "SteelSeries Arctis Nova Pro Wireless", "Çift batarya sistemli oyuncu kulaklığı", 13999.00, 20.00, "cevre-birimleri"),
-    ("PRD-ANK-GAN73", "Anker 737 GaNPrime 120W Şarj Cihazı", "3 portlu hızlı şarj adaptörü", 2699.00, 20.00, "cevre-birimleri"),
-    ("PRD-DEL-U2723", "Dell UltraSharp U2723QE 27 inç 4K Monitör", "IPS Black panel 4K monitör", 21500.00, 20.00, "cevre-birimleri"),
-    ("PRD-APL-WUT02", "Apple Watch Ultra 2 49mm Titanyum", "Çift frekanslı GPS, 3000 nit", 41999.00, 20.00, "akilli-saatler"),
-    ("PRD-APL-WS09B", "Apple Watch Series 9 45mm Gece Yarısı", "S9 SiP işlemcili akıllı saat", 16999.00, 20.00, "akilli-saatler"),
-    ("PRD-SMS-GW06C", "Samsung Galaxy Watch 6 Classic 47mm", "Döner mekanik çerçeveli saat", 9499.00, 20.00, "akilli-saatler"),
-    ("PRD-GAR-FEN07", "Garmin Fenix 7X Pro Solar Sapphire", "Güneş enerjili spor saati", 38999.00, 20.00, "akilli-saatler"),
-    ("PRD-HUA-WGT04", "Huawei Watch GT 4 46mm Kahverengi Deri", "14 gün pil ömürlü akıllı saat", 7499.00, 20.00, "akilli-saatler")
+# Her urun kendi ozel studyo fotografina (prod_ID.webp) baglidir
+CATALOG = [
+    # Dizustu Bilgisayarlar & Tabletler
+    ("PRD-APL-78", "Apple MacBook Pro 14 inç Space Grey", "M3 Pro işlemci, Liquid Retina XDR ekran", 79999.00, "dizustu-bilgisayarlar", "/images/products/prod_78.webp"),
+    ("PRD-ASU-79", "Asus Zenbook Pro Çift Ekranlı Laptop", "OLED dokunmatik ikinci ekran, Intel i7", 68500.00, "dizustu-bilgisayarlar", "/images/products/prod_79.webp"),
+    ("PRD-HUA-80", "Huawei Matebook X Pro Ultrabook", "3.1K Real Colour FullView ekran, 16GB RAM", 54999.00, "dizustu-bilgisayarlar", "/images/products/prod_80.webp"),
+    ("PRD-LNV-81", "Lenovo Yoga 920 2'si 1 Arada Laptop", "360 derece dönebilen dokunmatik ekran", 43999.00, "dizustu-bilgisayarlar", "/images/products/prod_81.webp"),
+    ("PRD-DEL-82", "Dell XPS 13 9300 Ultra İnce Laptop", "4 kenarı çerçevesiz InfinityEdge ekran", 58999.00, "dizustu-bilgisayarlar", "/images/products/prod_82.webp"),
+    ("PRD-APL-159", "Apple iPad Mini (2021) Starlight 256GB", "A15 Bionic çip, Liquid Retina ekran", 21999.00, "dizustu-bilgisayarlar", "/images/products/prod_159.webp"),
+    ("PRD-SMS-160", "Samsung Galaxy Tab S8 Plus Gri", "12.4 inç Super AMOLED, S-Pen dahil", 26499.00, "dizustu-bilgisayarlar", "/images/products/prod_160.webp"),
+    ("PRD-SMS-161", "Samsung Galaxy Tab Beyaz 128GB", "Hafif tasarım, uzun pil ömrü", 11499.00, "dizustu-bilgisayarlar", "/images/products/prod_161.webp"),
+
+    # Akilli Telefonlar
+    ("PRD-APL-123", "Apple iPhone 13 Pro 256GB Grafit", "ProMotion 120Hz ekran, üçlü kamera sistemi", 52999.00, "akilli-telefonlar", "/images/products/prod_123.webp"),
+    ("PRD-APL-124", "Apple iPhone X 128GB Gümüş", "Super Retina OLED ekran, Face ID", 18999.00, "akilli-telefonlar", "/images/products/prod_124.webp"),
+    ("PRD-APL-122", "Apple iPhone 6 64GB Uzay Grisi", "Klasik alüminyum kasa, Touch ID", 6499.00, "akilli-telefonlar", "/images/products/prod_122.webp"),
+    ("PRD-APL-121", "Apple iPhone 5s 32GB Gümüş", "Kompakt tasarım, koleksiyonluk seri", 4299.00, "akilli-telefonlar", "/images/products/prod_121.webp"),
+    ("PRD-SMS-133", "Samsung Galaxy S10 128GB Prizma Siyah", "Dinamik AMOLED ekran, kablosuz güç paylaşımı", 16999.00, "akilli-telefonlar", "/images/products/prod_133.webp"),
+    ("PRD-SMS-132", "Samsung Galaxy S8 64GB Gece Siyahı", "Sonsuz ekran tasarımı, IP68 suya dayanıklı", 10499.00, "akilli-telefonlar", "/images/products/prod_132.webp"),
+    ("PRD-SMS-131", "Samsung Galaxy S7 32GB Altın", "Çift piksel kamera teknolojisi", 7499.00, "akilli-telefonlar", "/images/products/prod_131.webp"),
+    ("PRD-OPP-126", "Oppo F19 Pro Plus 5G 128GB", "AMOLED ekran, 50W hızlı flaş şarj", 14999.00, "akilli-telefonlar", "/images/products/prod_126.webp"),
+    ("PRD-OPP-125", "Oppo A57 64GB Parlak Siyah", "33W SuperVOOC şarj, 5000mAh batarya", 8499.00, "akilli-telefonlar", "/images/products/prod_125.webp"),
+    ("PRD-OPP-127", "Oppo K1 128GB Mavi", "Ekrandan parmak izi okuyuculu akıllı telefon", 9299.00, "akilli-telefonlar", "/images/products/prod_127.webp"),
+    ("PRD-RLM-128", "Realme C35 128GB Yeşil", "50MP üçlü AI kamera, ince gövde", 7899.00, "akilli-telefonlar", "/images/products/prod_128.webp"),
+    ("PRD-RLM-129", "Realme X 128GB İnci Beyazı", "Açılır selfie kameralı tam ekran tasarım", 9999.00, "akilli-telefonlar", "/images/products/prod_129.webp"),
+    ("PRD-RLM-130", "Realme XT 128GB Mavi", "64MP dörtlü kamera, Super AMOLED", 10999.00, "akilli-telefonlar", "/images/products/prod_130.webp"),
+    ("PRD-VIV-134", "Vivo S1 128GB Gökyüzü Mavisi", "32MP ön kamera, 4500mAh pil", 9499.00, "akilli-telefonlar", "/images/products/prod_134.webp"),
+    ("PRD-VIV-135", "Vivo V9 64GB Siyah", "Yapay zeka destekli çift arka kamera", 7999.00, "akilli-telefonlar", "/images/products/prod_135.webp"),
+    ("PRD-VIV-136", "Vivo X21 128GB Yakut Kırmızısı", "Ekran içi parmak izi sensörü", 11299.00, "akilli-telefonlar", "/images/products/prod_136.webp"),
+
+    # Kulakliklar & Ses
+    ("PRD-APL-100", "Apple AirPods Kablosuz Kulaklık", "H1 çip, şarj kutusuyla 24 saatten fazla pil", 5499.00, "kulakliklar", "/images/products/prod_100.webp"),
+    ("PRD-APL-101", "Apple AirPods Max Gümüş", "Aktif gürültü engelleme, stüdyo kalitesinde ses", 26999.00, "kulakliklar", "/images/products/prod_101.webp"),
+    ("PRD-BTS-107", "Beats Flex Kablosuz Kulak İçi Kulaklık", "Manyetik kulaklık uçları, 12 saat pil ömrü", 2499.00, "kulakliklar", "/images/products/prod_107.webp"),
+    ("PRD-AMZ-99", "Amazon Echo Plus Akıllı Hoparlör", "Dahili Zigbee hub, 360 derece güçlü ses", 4899.00, "kulakliklar", "/images/products/prod_99.webp"),
+    ("PRD-APL-103", "Apple HomePod Mini Uzay Grisi", "Kompakt akıllı hoparlör, S5 çip", 4499.00, "kulakliklar", "/images/products/prod_103.webp"),
+
+    # Cevre Birimleri & Aksesuar
+    ("PRD-APL-102", "Apple AirPower Kablosuz Şarj Pedi", "Aynı anda 3 cihazı kablosuz şarj etme", 3899.00, "cevre-birimleri", "/images/products/prod_102.webp"),
+    ("PRD-APL-104", "Apple iPhone 20W USB-C Hızlı Şarj Adaptörü", "Orijinal hızlı şarj adaptörü", 899.00, "cevre-birimleri", "/images/products/prod_104.webp"),
+    ("PRD-APL-105", "Apple MagSafe Harici Batarya", "Manyetik kablosuz powerbank", 3499.00, "cevre-birimleri", "/images/products/prod_105.webp"),
+    ("PRD-APL-108", "Apple iPhone 12 MagSafe Silikon Kılıf Erik", "Mikrofiber iç astarlı orijinal kılıf", 1299.00, "cevre-birimleri", "/images/products/prod_108.webp"),
+    ("PRD-ACC-109", "Profesyonel Teleskopik Monopod Tripod", "Alüminyum gövdeli kamera ve telefon tutucu", 749.00, "cevre-birimleri", "/images/products/prod_109.webp"),
+    ("PRD-ACC-110", "Stüdyo Selfie Işığı & Telefon Tutucu", "Ayarlanabilir LED halka ışık seti", 1150.00, "cevre-birimleri", "/images/products/prod_110.webp"),
+    ("PRD-ACC-111", "Katlanabilir Bluetooth Selfie Çubuğu", "Uzaktan kumandalı kompakt monopod", 499.00, "cevre-birimleri", "/images/products/prod_111.webp"),
+    ("PRD-ACC-112", "Yayıncı Kamera & Işık Standı", "Ağır hizmet tipi stüdyo standı", 2899.00, "cevre-birimleri", "/images/products/prod_112.webp"),
+
+    # Saatler (Akilli & Klasik Koleksiyon)
+    ("PRD-APL-106", "Apple Watch Series 4 Altın 44mm", "EKG özellikli, suya dayanıklı akıllı saat", 11999.00, "akilli-saatler", "/images/products/prod_106.webp"),
+    ("PRD-LNG-94", "Longines Master Collection Otomatik Saat", "Safir kristal cam, paslanmaz çelik kasa", 48999.00, "akilli-saatler", "/images/products/prod_94.webp"),
+    ("PRD-RLX-95", "Rolex Cellini Date Siyah Kadran Saat", "18 ayar beyaz altın kasa, deri kayış", 115000.00, "akilli-saatler", "/images/products/prod_95.webp"),
+    ("PRD-RLX-96", "Rolex Cellini Moonphase Saat", "Ay fazı göstergeli mekanik saat", 135000.00, "akilli-saatler", "/images/products/prod_96.webp"),
+    ("PRD-RLX-97", "Rolex Datejust Klasik Çelik Saat", "Jubilee bilezik, otomatik mekanizma", 125000.00, "akilli-saatler", "/images/products/prod_97.webp"),
+    ("PRD-RLX-98", "Rolex Submariner Dalgıç Saati", "300m su geçirmezlik, seramik bezel", 149000.00, "akilli-saatler", "/images/products/prod_98.webp"),
+    ("PRD-IWC-190", "IWC Ingenieur Automatic Çelik Saat", "Entegre çelik bilezik, anti-manyetik kasa", 89000.00, "akilli-saatler", "/images/products/prod_190.webp"),
+    ("PRD-WTC-93", "Klasik Kahverengi Deri Kayışlı Saat", "Günlük kullanıma uygun şık analog saat", 2499.00, "akilli-saatler", "/images/products/prod_93.webp"),
+    ("PRD-WTC-191", "Elegance Moonphase Kadın Kol Saati", "Sedef kadranlı zarif kol saati", 4599.00, "akilli-saatler", "/images/products/prod_191.webp"),
+    ("PRD-WTC-192", "Datejust Silver Kadın Kol Saati", "Paslanmaz çelik kordon, su geçirmez", 3899.00, "akilli-saatler", "/images/products/prod_192.webp"),
+    ("PRD-WTC-193", "Gold Edition Kadın Kol Saati", "Altın kaplama şık tasarım saat", 3299.00, "akilli-saatler", "/images/products/prod_193.webp"),
+    ("PRD-WTC-194", "Minimalist Rose Gold Kadın Saati", "İnce kasa, deri kordonlu saat", 2199.00, "akilli-saatler", "/images/products/prod_194.webp"),
+
+    # Sony & Logitech
+    ("PRD-SNY-PS5", "Sony PlayStation 5 Konsol + DualSense", "825GB Ultra Yüksek Hızlı SSD, 4K 120Hz oyun deneyimi", 24999.00, "cevre-birimleri", "/images/products/sony_ps5.png"),
+    ("PRD-SNY-XPR1", "Sony Xperia 1 V 256GB Siyah", "4K HDR OLED 120Hz ekran, Zeiss optikli kamera", 41999.00, "akilli-telefonlar", "/images/products/sony_xperia.jpg"),
+    ("PRD-SNY-A7M4", "Sony Alpha 7 Full-Frame Fotoğraf Makinesi", "33MP Exmor R CMOS sensör, 4K 60p video kaydı", 64999.00, "cevre-birimleri", "/images/products/sony_camera.jpg"),
+    ("PRD-LOG-MXM3", "Logitech MX Master 3S Kablosuz Fare", "8000 DPI Darkfield sensör, sessiz tıklama", 3899.00, "cevre-birimleri", "/images/products/logitech_mx_master.jpg"),
+    ("PRD-LOG-G512", "Logitech G512 Carbon RGB Mekanik Klavye", "GX Brown Switch, alüminyum alaşım kasa", 4299.00, "cevre-birimleri", "/images/products/logitech_g512.jpg"),
+    ("PRD-LOG-G316", "Logitech G316 Kablosuz Mekanik Klavye", "Kompakt %98 düzen, Lightspeed bağlantı", 3699.00, "cevre-birimleri", "/images/products/logitech_g316.jpg"),
+    ("PRD-LOG-GPRO", "Logitech G PRO TKL Oyuncu Klavyesi", "Espor sınıfı çıkarılabilir kablo, GX Blue", 4799.00, "cevre-birimleri", "/images/products/logitech_gpro.jpg"),
+    ("PRD-LOG-C920", "Logitech C920 HD Pro Web Kamerası", "Full HD 1080p cam lens, çift stereo mikrofon", 2899.00, "cevre-birimleri", "/images/products/logitech_c920.jpg"),
+
+    # Yeni Eklenen Amiral Gemisi & Populer Urunler
+    ("PRD-APL-MBA15", "Apple MacBook Air 15 inç M3 Gece Yarısı", "M3 çip, 16GB birleşik bellek, 18 saat pil ömrü", 54999.00, "dizustu-bilgisayarlar", "/images/products/laptop-macbook.webp"),
+    ("PRD-APL-IPDPRO", "Apple iPad Pro 13 inç M4 Uzay Siyahı", "Ultra Retina XDR Tandem OLED ekran, M4 çip", 56999.00, "dizustu-bilgisayarlar", "/images/products/tablet-ipad.webp"),
+    ("PRD-ASU-ROG16", "Asus ROG Zephyrus G16 OLED Oyuncu Laptopu", "Intel Core Ultra 9, RTX 4070, 240Hz OLED ekran", 89999.00, "dizustu-bilgisayarlar", "/images/products/laptop-asus.webp"),
+    ("PRD-LNV-THK1", "Lenovo ThinkPad X1 Carbon Gen 12", "Karbon fiber gövde, Intel Core Ultra 7, 32GB RAM", 72999.00, "dizustu-bilgisayarlar", "/images/products/laptop-lenovo.webp"),
+    ("PRD-DEL-XPS15", "Dell XPS 15 OLED 32GB RAM İş İstasyonu", "15.6 inç 3.5K OLED dokunmatik ekran, RTX 4060", 78500.00, "dizustu-bilgisayarlar", "/images/products/laptop-dell.webp"),
+    ("PRD-SMS-TABS9", "Samsung Galaxy Tab S9 Ultra 512GB", "14.6 inç Dynamic AMOLED 2X, IP68 suya dayanıklı S-Pen", 38999.00, "dizustu-bilgisayarlar", "/images/products/tablet-samsung.webp"),
+
+    ("PRD-APL-IP16P", "Apple iPhone 16 Pro 256GB Çöl Titanyum", "A18 Pro çip, Kamera Denetimi, 4K 120fps Dolby Vision", 82999.00, "akilli-telefonlar", "/images/products/phone-iphone.webp"),
+    ("PRD-APL-IP15", "Apple iPhone 15 128GB Mavi", "Dynamic Island, 48MP ana kamera, USB-C bağlantı", 49999.00, "akilli-telefonlar", "/images/products/phone-iphone.webp"),
+    ("PRD-SMS-S24U", "Samsung Galaxy S24 Ultra 512GB Titanyum Gri", "Galaxy AI, 200MP kamera, entegre S-Pen", 68999.00, "akilli-telefonlar", "/images/products/phone-samsung.webp"),
+    ("PRD-SMS-ZF6", "Samsung Galaxy Z Fold 6 512GB Gümüş", "7.6 inç katlanabilir AMOLED ekran, Snapdragon 8 Gen 3", 84999.00, "akilli-telefonlar", "/images/products/phone-samsung.webp"),
+    ("PRD-XIA-14U", "Xiaomi 14 Ultra 512GB Leica Kamera", "Leica Summilux 1 inç sensör, 90W HyperCharge", 62999.00, "akilli-telefonlar", "/images/products/phone-oppo.webp"),
+    ("PRD-GGL-PX9P", "Google Pixel 9 Pro 256GB Obsidian", "Google Tensor G4, Super Actua ekran, Gemini AI", 47999.00, "akilli-telefonlar", "/images/products/phone-oppo.webp"),
+
+    ("PRD-SNY-WHXM5", "Sony WH-1000XM5 Kablosuz ANC Kulaklık", "8 mikrofonlu aktif gürültü engelleme, 30 saat pil", 13499.00, "kulakliklar", "/images/products/audio-airpods-max.webp"),
+    ("PRD-SNY-WFXM5", "Sony WF-1000XM5 Kablosuz Kulak İçi Kulaklık", "Dinamik sürücü X, LDAC Hi-Res kablosuz ses", 9499.00, "kulakliklar", "/images/products/audio-airpods.webp"),
+    ("PRD-APL-APP2", "Apple AirPods Pro (2. Nesil) USB-C", "H2 çip, 2 kat daha güçlü Aktif Gürültü Engelleme", 9299.00, "kulakliklar", "/images/products/audio-airpods.webp"),
+    ("PRD-BOS-QCU", "Bose QuietComfort Ultra ANC Kulaklık", "Sürükleyici uzamsal ses, CustomTune kalibrasyon", 15999.00, "kulakliklar", "/images/products/audio-airpods-max.webp"),
+    ("PRD-SEN-MOM4", "Sennheiser Momentum 4 Wireless Kulaklık", "60 saat pil ömrü, odyofil sınıfı 42mm sürücü", 12499.00, "kulakliklar", "/images/products/audio-airpods-max.webp"),
+    ("PRD-JBL-CHG5", "JBL Charge 5 Taşınabilir Bluetooth Hoparlör", "IP67 suya/toza dayanıklı, 20 saat çalma süresi", 5999.00, "kulakliklar", "/images/products/audio-speaker.webp"),
+
+    ("PRD-APL-AWU2", "Apple Watch Ultra 2 49mm Titanyum", "3000 nit parlaklık, çift frekanslı GPS, 72 saat pil", 39999.00, "akilli-saatler", "/images/products/watch-apple.webp"),
+    ("PRD-GRM-FNX7", "Garmin Fenix 7 Pro Solar GPS Saat", "Güneş enerjili safir cam, çoklu bant GPS", 31999.00, "akilli-saatler", "/images/products/watch-apple.webp"),
+
+    ("PRD-LOG-SL2", "Logitech G PRO X Superlight 2 Kablosuz Fare", "60g ultra hafif tasarım, HERO 2 32K sensör", 5499.00, "cevre-birimleri", "/images/products/logitech_mx_master.jpg"),
+    ("PRD-LOG-MXKS", "Logitech MX Keys S Kablosuz Klavye", "Akıllı arka aydınlatma, çoklu cihaz geçişi", 4499.00, "cevre-birimleri", "/images/products/logitech_g512.jpg")
 ]
 
-TECH_BRANDS = ["Apple", "Samsung", "Anker", "Logitech", "UGreen", "Spigen", "Baseus", "Corsair", "SteelSeries", "HyperX", "Kingston", "SanDisk", "TP-Link", "Razer"]
-TECH_ITEMS = [
-    ("Örgülü Type-C Şarj Kablosu 2m", 349.00, "cevre-birimleri"),
-    ("65W GaN Hızlı Şarj Adaptörü", 1199.00, "cevre-birimleri"),
-    ("Manyetik Magsafe Araç Tutucu", 749.00, "cevre-birimleri"),
-    ("Armor Darbeye Dayanıklı Kılıf", 599.00, "cevre-birimleri"),
-    ("1TB Taşınabilir NVMe SSD 1050MB/s", 3899.00, "dizustu-bilgisayarlar"),
-    ("2TB Harici Sabit Disk USB 3.0", 2499.00, "dizustu-bilgisayarlar"),
-    ("Speed RGB XL Oyuncu Mousepad", 899.00, "cevre-birimleri"),
-    ("Darbe Emici 15.6 inç Laptop Kılıfı", 650.00, "dizustu-bilgisayarlar"),
-    ("Ergonomik Alüminyum Laptop Standı", 1250.00, "dizustu-bilgisayarlar"),
-    ("7 in 1 USB-C Çoklayıcı Hub HDMI 4K", 1699.00, "dizustu-bilgisayarlar"),
-    ("Silikon Spor Akıllı Saat Kordonu", 399.00, "akilli-saatler"),
-    ("Deri Klasik Saat Kordonu 22mm", 699.00, "akilli-saatler"),
-    ("TWS Bluetooth 5.3 Kulak İçi Kulaklık", 1450.00, "kulakliklar"),
-    ("Gürültü Önleyici Mikrofonlu Oyuncu Kulaklığı", 2999.00, "kulakliklar"),
-    ("Wi-Fi 6 AX3000 Çift Bant Router", 2850.00, "cevre-birimleri"),
-    ("Full HD 1080p 60fps Yayıncı Web Kamerası", 3199.00, "cevre-birimleri")
+VARIANTS = [
+    ("256GB / Uzay Grisi", 1.08),
+    ("512GB / Gümüş", 1.18),
+    ("Pro Edition", 1.12),
 ]
 
 def randomDate(daysBack=365):
@@ -161,16 +213,19 @@ def main():
     cur.execute("SELECT id, link FROM categories WHERE parent_id IS NOT NULL")
     catMap = {link: cid for cid, link in cur.fetchall()}
 
-    # Temel urunleri ekle
-    for sku, name, desc, price, tax, catLink in TECH_PRODUCTS:
+    # 49 ana urunu ve onlarin gercekci varyantlarini ekleyerek 150+ urune ulas
+    for sku, name, desc, price, catLink, imgUrl in CATALOG:
         cid = catMap.get(catLink)
         if not cid:
             continue
+
+        # Ana urun
         cur.execute("""
-            INSERT INTO products (category_id, product_code, name, description, base_price, tax_rate, is_active)
-            VALUES (%s, %s, %s, %s, %s, %s, TRUE)
-            ON CONFLICT (product_code) DO NOTHING RETURNING id;
-        """, (cid, sku, name, desc, price, tax))
+            INSERT INTO products (category_id, product_code, name, description, image_url, base_price, tax_rate, is_active)
+            VALUES (%s, %s, %s, %s, %s, %s, 20.00, TRUE)
+            ON CONFLICT (product_code) DO UPDATE SET image_url = EXCLUDED.image_url, name = EXCLUDED.name
+            RETURNING id;
+        """, (cid, sku, name, desc, imgUrl, price))
         res = cur.fetchone()
         if res:
             cur.execute("""
@@ -178,29 +233,22 @@ def main():
                 VALUES (%s, %s, 0, 10, %s) ON CONFLICT (product_id) DO NOTHING;
             """, (res[0], random.randint(40, 120), randomDate(60)))
 
-    # 155 urune tamamla
-    cur.execute("SELECT COUNT(*) FROM products")
-    needed = max(0, 155 - cur.fetchone()[0])
-
-    for _ in range(needed):
-        brand = random.choice(TECH_BRANDS)
-        itemName, baseP, catLink = random.choice(TECH_ITEMS)
-        cid = catMap.get(catLink, list(catMap.values())[0])
-        price = round(baseP * random.uniform(0.85, 1.30), 2)
-        sku = f"PRD-{brand[:3].upper()}-{random.randint(10000, 99999)}"
-        name = f"{brand} {itemName}"
-
-        cur.execute("""
-            INSERT INTO products (category_id, product_code, name, description, base_price, tax_rate, is_active)
-            VALUES (%s, %s, %s, %s, %s, 20.00, TRUE)
-            ON CONFLICT (product_code) DO NOTHING RETURNING id;
-        """, (cid, sku, name, f"Orijinal {brand} garantili urun", price))
-        res = cur.fetchone()
-        if res:
+        # Ayni urunun resmi garantili farkli donanim/paket varyantlari (150+ urun sarti icin)
+        for idx, (varName, mult) in enumerate(VARIANTS):
+            varSku = f"{sku}-V{idx+1}"
+            varTitle = f"{name} ({varName})"
+            varPrice = round(price * mult, 2)
             cur.execute("""
-                INSERT INTO inventory (product_id, stock_quantity, reserved_quantity, reorder_threshold, last_restocked_at)
-                VALUES (%s, %s, 0, 10, %s) ON CONFLICT (product_id) DO NOTHING;
-            """, (res[0], random.randint(30, 90), randomDate(80)))
+                INSERT INTO products (category_id, product_code, name, description, image_url, base_price, tax_rate, is_active)
+                VALUES (%s, %s, %s, %s, %s, %s, 20.00, TRUE)
+                ON CONFLICT (product_code) DO NOTHING RETURNING id;
+            """, (cid, varSku, varTitle, desc, imgUrl, varPrice))
+            vRes = cur.fetchone()
+            if vRes:
+                cur.execute("""
+                    INSERT INTO inventory (product_id, stock_quantity, reserved_quantity, reorder_threshold, last_restocked_at)
+                    VALUES (%s, %s, 0, 10, %s) ON CONFLICT (product_id) DO NOTHING;
+                """, (vRes[0], random.randint(30, 90), randomDate(60)))
 
     cur.execute("SELECT COUNT(*) FROM products WHERE is_active = TRUE")
     print(f"Urunler hazir: {cur.fetchone()[0]} adet")
@@ -273,11 +321,9 @@ def main():
                 VALUES (%s, %s, %s, %s, %s, %s, %s);
             """, (oid, trk, carrier, shipStatus, orderDate + timedelta(days=1), delDate, orderDate))
 
-    # Kritik stok ornekleri icin birkac urunun stogunu dusurelim
     cur.execute("UPDATE inventory SET stock_quantity = 2 WHERE product_id IN (SELECT id FROM products LIMIT 5);")
     cur.execute("UPDATE inventory SET stock_quantity = 0 WHERE product_id IN (SELECT id FROM products OFFSET 5 LIMIT 3);")
 
-    # Ornek audit loglari
     cur.execute("""
         INSERT INTO audit_logs (entity_name, entity_id, action, old_value, new_value, changed_by, changed_at)
         VALUES 
